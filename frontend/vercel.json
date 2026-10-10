@@ -5,6 +5,10 @@
     {
       "source": "/api/:path*",
       "destination": "https://stylesync-api-jf6m.onrender.com/api/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
