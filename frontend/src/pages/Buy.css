@@ -1,0 +1,789 @@
+
+/* =====================================================
+   STYLESYNC - BUY NOW / CHECKOUT
+   ===================================================== */
+
+.buy-now-page {
+    min-height: 100vh;
+    background: #faf9f7;
+    color: #171717;
+    font-family: inherit;
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.buy-now-header {
+    height: 76px;
+    padding: 0 5%;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+    border-bottom: 1px solid #e4e1dc;
+
+    background: rgba(250, 249, 247, 0.96);
+
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.buy-now-back {
+    width: fit-content;
+
+    padding: 0;
+
+    border: none;
+    background: none;
+
+    color: #171717;
+
+    font-size: 13px;
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition: opacity 0.2s ease;
+}
+
+.buy-now-back:hover {
+    opacity: 0.55;
+}
+
+.buy-now-brand {
+    font-size: 24px;
+    font-weight: 600;
+
+    letter-spacing: -0.8px;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+   ===================================================== */
+
+.buy-now-container {
+    width: min(1150px, 90%);
+
+    margin: 0 auto;
+
+    padding: 60px 0 100px;
+}
+
+
+/* =====================================================
+   PAGE HEADING
+   ===================================================== */
+
+.buy-now-heading {
+    margin-bottom: 50px;
+}
+
+.buy-now-heading p {
+    margin: 0 0 12px;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    color: #777;
+}
+
+.buy-now-heading h1 {
+    margin: 0;
+
+    font-size: clamp(38px, 5vw, 56px);
+
+    font-weight: 400;
+
+    letter-spacing: -2px;
+
+    line-height: 1.05;
+}
+
+
+/* =====================================================
+   ERROR MESSAGE
+   ===================================================== */
+
+.checkout-error {
+    margin-bottom: 25px;
+
+    padding: 14px 16px;
+
+    border: 1px solid #e1bebe;
+
+    background: #fff5f5;
+
+    color: #a52b2b;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   MAIN TWO COLUMN LAYOUT
+   ===================================================== */
+
+.buy-now-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.5fr)
+        minmax(320px, 0.8fr);
+
+    gap: 70px;
+
+    align-items: start;
+}
+
+
+/* =====================================================
+   LEFT SIDE
+   ===================================================== */
+
+.checkout-left {
+    min-width: 0;
+}
+
+.checkout-section {
+    padding: 30px 0 40px;
+
+    border-top: 1px solid #dedbd6;
+}
+
+.checkout-section:first-child {
+    padding-top: 0;
+
+    border-top: none;
+}
+
+
+/* =====================================================
+   SECTION TITLE
+   ===================================================== */
+
+.section-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 30px;
+}
+
+.section-title span {
+    font-size: 11px;
+
+    color: #999;
+
+    letter-spacing: 0.5px;
+}
+
+.section-title h2 {
+    margin: 0;
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+    letter-spacing: -0.3px;
+}
+
+
+/* =====================================================
+   ADDRESS FORM
+   ===================================================== */
+
+.address-form {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px 18px;
+}
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    min-width: 0;
+}
+
+/* Address textarea takes full width */
+.form-group.full-field {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-size: 11px;
+
+    color: #555;
+
+    letter-spacing: 0.1px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 14px;
+
+    border: 1px solid #d9d6d1;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #171717;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    border-radius: 0;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-group input {
+    height: 48px;
+}
+
+.form-group textarea {
+    min-height: 95px;
+
+    resize: vertical;
+
+    line-height: 1.5;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #171717;
+
+    background: #fff;
+
+    box-shadow: 0 0 0 1px #171717;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #aaa;
+}
+
+
+/* =====================================================
+   PAYMENT SECTION
+   ===================================================== */
+
+.payment-placeholder {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 20px;
+
+    border: 1px solid #dedbd6;
+
+    background: #fff;
+}
+
+.payment-icon {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #d8d5d0;
+
+    font-size: 17px;
+}
+
+.payment-placeholder h3 {
+    margin: 0 0 5px;
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+.payment-placeholder p {
+    margin: 0;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    color: #777;
+}
+
+
+/* =====================================================
+   ORDER SUMMARY
+   ===================================================== */
+
+.buy-now-summary {
+    align-self: start;
+
+    position: sticky;
+
+    top: 105px;
+
+    padding: 30px;
+
+    border: 1px solid #dedbd6;
+
+    background: #fff;
+}
+
+.buy-now-summary > h2 {
+    margin: 0 0 28px;
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+    letter-spacing: -0.3px;
+}
+
+
+/* =====================================================
+   CHECKOUT PRODUCT
+   Matches current JSX:
+   .checkout-product
+   ├── img
+   ├── div
+   └── strong
+   ===================================================== */
+
+.checkout-product {
+    display: grid;
+
+    grid-template-columns: 90px minmax(0, 1fr) auto;
+
+    gap: 17px;
+
+    align-items: start;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #dedbd6;
+}
+
+.checkout-product img {
+    width: 90px;
+    height: 115px;
+
+    flex-shrink: 0;
+
+    display: block;
+
+    object-fit: cover;
+
+    background: #eee;
+}
+
+.checkout-product > div {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    min-width: 0;
+}
+
+.checkout-product > div p {
+    margin: 0 0 7px;
+
+    font-size: 9px;
+
+    color: #777;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.checkout-product > div h3 {
+    margin: 0 0 10px;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    line-height: 1.4;
+}
+
+.checkout-product > div span {
+    margin-bottom: 4px;
+
+    font-size: 11px;
+
+    color: #777;
+}
+
+.checkout-product > strong {
+    margin-top: 2px;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   SUMMARY LINE
+   ===================================================== */
+
+.summary-line {
+    height: 1px;
+
+    margin: 25px 0;
+
+    background: #dedbd6;
+}
+
+
+/* =====================================================
+   PRICE / TOTAL LINES
+   ===================================================== */
+
+.total-line {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin: 14px 0;
+
+    font-size: 13px;
+}
+
+.total-line span {
+    color: #555;
+}
+
+.total-line strong {
+    color: #171717;
+
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   GRAND TOTAL
+   ===================================================== */
+
+.total-line.grand {
+    margin-top: 25px;
+
+    padding-top: 22px;
+
+    border-top: 1px solid #dedbd6;
+}
+
+.total-line.grand span {
+    color: #171717;
+
+    font-size: 15px;
+}
+
+.total-line.grand strong {
+    font-size: 19px;
+
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   PLACE ORDER BUTTON
+   ===================================================== */
+
+.place-order-button {
+    width: 100%;
+
+    margin-top: 28px;
+
+    padding: 17px;
+
+    border: none;
+
+    background: #171717;
+
+    color: #fff;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+.place-order-button:hover {
+    opacity: 0.86;
+}
+
+.place-order-button:active {
+    transform: translateY(1px);
+}
+
+.place-order-button:disabled {
+    opacity: 0.5;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* =====================================================
+   MOBILE PLACE ORDER
+   ===================================================== */
+
+/*
+   Your JSX currently has two PLACE ORDER buttons:
+   1. .mobile-place inside the form
+   2. normal button inside the summary
+
+   On desktop, hide the form version.
+   On mobile, show it and hide the summary version.
+*/
+
+.mobile-place {
+    display: none;
+}
+
+
+/* =====================================================
+   CHECKOUT NOTE
+   ===================================================== */
+
+.checkout-note {
+    margin: 15px 0 0;
+
+    text-align: center;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+    color: #888;
+}
+
+
+/* =====================================================
+   LOADING
+   ===================================================== */
+
+.buy-now-loading {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #faf9f7;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .buy-now-layout {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .buy-now-summary {
+        position: static;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    .buy-now-header {
+        height: 65px;
+
+        padding: 0 20px;
+    }
+
+    .buy-now-brand {
+        font-size: 20px;
+    }
+
+    .buy-now-back {
+        font-size: 12px;
+    }
+
+    .buy-now-container {
+        width: 92%;
+
+        padding: 40px 0 70px;
+    }
+
+    .buy-now-heading {
+        margin-bottom: 35px;
+    }
+
+    .buy-now-heading h1 {
+        font-size: 37px;
+
+        letter-spacing: -1.5px;
+    }
+
+    /* Form becomes one column */
+    .address-form {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .form-group.full-field {
+        grid-column: auto;
+    }
+
+    .checkout-section {
+        padding-bottom: 32px;
+    }
+
+    /* Summary */
+    .buy-now-summary {
+        padding: 22px;
+    }
+
+    .checkout-product {
+        grid-template-columns: 75px minmax(0, 1fr);
+
+        gap: 14px;
+    }
+
+    .checkout-product img {
+        width: 75px;
+        height: 98px;
+    }
+
+    .checkout-product > strong {
+        grid-column: 2;
+
+        margin-top: -5px;
+    }
+
+    .checkout-product > div h3 {
+        font-size: 13px;
+    }
+
+    /* Payment */
+    .payment-placeholder {
+        padding: 16px;
+    }
+
+    /* Show mobile form button */
+    .mobile-place {
+        display: block;
+
+        margin-top: 5px;
+    }
+
+    /* Hide desktop summary button */
+    .buy-now-summary > .place-order-button {
+        display: none;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+   ===================================================== */
+
+@media (max-width: 400px) {
+
+    .buy-now-header {
+        grid-template-columns: auto 1fr;
+
+        padding: 0 16px;
+    }
+
+    .buy-now-brand {
+        justify-self: end;
+
+        font-size: 19px;
+    }
+
+    .buy-now-container {
+        width: 94%;
+    }
+
+    .buy-now-heading h1 {
+        font-size: 32px;
+    }
+
+    .buy-now-summary {
+        padding: 18px;
+    }
+
+    .section-title h2 {
+        font-size: 18px;
+    }
+
+    .checkout-product {
+        grid-template-columns: 65px minmax(0, 1fr);
+    }
+
+    .checkout-product img {
+        width: 65px;
+        height: 88px;
+    }
+
+}

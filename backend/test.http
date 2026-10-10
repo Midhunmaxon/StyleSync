@@ -1,0 +1,16 @@
+
+GET http://localhost:5000/api/cart
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2YWM0YWY4NDhlNTQwMzgxN2M1ODQ4MjYiLCJlbWFpbCI6InRlc3RAc3R5bGVzeW5jLmNvbSIsImlhdCI6MTc5MTI3NTU4MiwiZXhwIjoxNzkxODgwMzgyfQ.cdIiQ6dkOo7dd2M7JsztSN1iMjQHtchueETe24yfRIc
+
+### Add Product With Variant
+POST http://localhost:5000/api/cart/add
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2YWM0YWY4NDhlNTQwMzgxN2M1ODQ4MjYiLCJlbWFpbCI6InRlc3RAc3R5bGVzeW5jLmNvbSIsImlhdCI6MTc5MTI3NTU4MiwiZXhwIjoxNzkxODgwMzgyfQ.cdIiQ6dkOo7dd2M7JsztSN1iMjQHtchueETe24yfRIc
+
+
+{
+  "productId": "6a985dd648e33f73db74e2d1",
+  "quantity": 2,
+  "size": "M",
+  "color": "grey"
+}
