@@ -68,6 +68,15 @@ app.use("/api/ai", aiRoutes);
 app.use("/api/cart", cartRoutes);
 
 // API health check
+
+app.get("/api/health", (_req, res) => {
+    res.status(200).json({
+        status: "ok",
+        message: "StyleSync backend is running",
+        timestamp: new Date().toISOString(),
+    });
+});
+
 app.get("/", (_req, res) => {
     res.json({ message: "StyleSync API is running" });
 });
