@@ -78,7 +78,7 @@ app.get("/api/health", (_req, res) => {
 });
 
 app.get("/", (_req, res) => {
-    res.json({ message: "StyleSync API is running" });
+    res.json({ message: "StyleSync API is running " });
 });
 
 export default app;
